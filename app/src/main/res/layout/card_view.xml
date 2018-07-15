@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:onClick="articleView"
+    card_view:elevation="14dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_blah3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_text"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/iv_image"
+            android:layout_toRightOf="@+id/iv_image"
+            android:fontFamily="@font/candara"
+            android:text="TYPE OF ARTICLE"
+            android:textSize="10sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="1.0"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_image"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="1.0"></TextView>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="95dp"
+            android:layout_height="76dp"
+            android:elevation="3dp"
+            android:fadingEdge="horizontal"
+            android:src="@drawable/laugh"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.016"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.47" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_image"
+            android:fontFamily="@font/candara"
+            android:gravity="left"
+            android:lines="2"
+            android:text="Title goes here hereherehereherehereherehere"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:transitionName="animating"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_image"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.096" />
+
+        <TextView
+            android:id="@+id/tv_blah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_text"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/iv_image"
+            android:layout_toRightOf="@+id/iv_image"
+            android:fontFamily="@font/candara"
+            android:text="Author 1, Author 2"
+            android:textSize="10sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_image"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.72"></TextView>
+
+        <TextView
+            android:id="@+id/tv_blah2"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_below="@+id/tv_text"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/iv_image"
+            android:layout_toRightOf="@+id/iv_image"
+            android:fontFamily="@font/candara"
+            android:text="DATE"
+            android:textSize="10dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_image"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_blah"></TextView>
+
+        <TextView
+            android:id="@+id/page_id_stored"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:text="page id "
+            android:textSize="1sp"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/tv_blah3"
+            card_view:layout_constraintStart_toEndOf="@+id/tv_blah"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+    </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>

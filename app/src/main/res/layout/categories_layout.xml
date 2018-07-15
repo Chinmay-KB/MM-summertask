@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackColor">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/departments_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/departments_rv"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="270dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/department_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@id/departments_rv"
+                android:layout_alignParentStart="true"
+                android:background="#FF2A5CE6"
+                android:fontFamily="@font/candara"
+                android:elevation="7dp"
+                android:padding="5dp"
+                android:text="Departments"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/campus_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departments_card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/campus_rv"
+                android:layout_width="match_parent"
+
+                android:nestedScrollingEnabled="false"
+                android:layout_height="270dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/campus_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@id/campus_rv"
+                android:layout_alignParentStart="true"
+                android:background="#FF2A5CE6"
+                android:fontFamily="@font/candara"
+                android:padding="5dp"
+                android:text="Campus"
+                android:elevation="7dp"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/views_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campus_card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/views_rv"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/views_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@id/views_rv"
+                android:layout_alignParentStart="true"
+                android:background="#FF2A5CE6"
+                android:elevation="7dp"
+                android:fontFamily="@font/candara"
+                android:padding="5dp"
+                android:text="Views"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/career_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/views_card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/career_rv"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/career_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@id/career_rv"
+                android:layout_alignParentStart="true"
+                android:background="#FF2A5CE6"
+                android:fontFamily="@font/candara"
+                android:elevation="7dp"
+                android:padding="5dp"
+                android:text="Career"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/alumni_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/career_card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/alumni_rv"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="270dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/alumni_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@id/alumni_rv"
+                android:layout_alignParentStart="true"
+                android:background="#FF2A5CE6"
+                android:fontFamily="@font/candara"
+                android:elevation="7dp"
+                android:padding="5dp"
+                android:text="Alumni"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/ddcwc_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alumni_card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ddcwc_rv"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="270dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/ddcwc_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@id/ddcwc_rv"
+                android:layout_alignParentStart="true"
+                android:background="#FF2A5CE6"
+                android:elevation="7dp"
+                android:fontFamily="@font/candara"
+                android:padding="5dp"
+                android:text="@string/dd_cwc"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

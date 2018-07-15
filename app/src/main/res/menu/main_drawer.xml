@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ama"
+            android:title="Ask a Question"
+            android:icon="@drawable/info"/>
+        <item
+            android:id="@+id/fav"
+            android:title="Favourites"
+            android:icon="@drawable/like"/>
+    </group>
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/health"
+        android:icon="@drawable/hospital"
+        android:title="Health and Emergency"/>
+    <item
+        android:id="@+id/halls"
+        android:icon="@drawable/building"
+        android:title="Halls of Residence"/>
+    <item
+        android:id="@+id/sac"
+        android:icon="@drawable/activities"
+        android:title="Student Activity Center"/>
+</group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/settings"/>
+        <item
+            android:id="@+id/bug"
+            android:title="Report Bug"
+            android:icon="@drawable/ladybird" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/network"
+            android:title="Share our App"/>
+        <item
+            android:id="@+id/contact_us"
+            android:title="Contact us"
+            android:icon="@drawable/contact_us"/>
+
+    </group>
+</menu>
