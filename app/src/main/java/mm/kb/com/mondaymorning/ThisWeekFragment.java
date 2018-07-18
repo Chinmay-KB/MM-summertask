@@ -1,9 +1,15 @@
 package mm.kb.com.mondaymorning;
 
+import android.app.Dialog;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.TextView;
 import android.widget.Toast;;import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -36,6 +43,9 @@ public class ThisWeekFragment extends Fragment {
     private static final String DATA_URL_ALLNEWS = "http://mondaymorning.nitrkl.ac.in/api/post/get/thisweek";
     private List<recyclerData> listItems;
     private List<recyclerData> recyclerDataList;
+    RecyclerView rv;
+    RecyclerView allNews;
+    FragmentManager fm;
 
     public ThisWeekFragment() {
         // Required empty public constructor
@@ -49,35 +59,71 @@ public class ThisWeekFragment extends Fragment {
         titleList = new ArrayList<>();
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.this_week_layout, container, false);
-        RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view);
+        rv = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view);
         rv.setHasFixedSize(true);
+        allNews = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view_all_news);
+        allNews.setHasFixedSize(true);
 
+        final View featuredCard=rootView.findViewById(R.id.featured_card);
+        View featuredCardL=featuredCard.findViewById(R.id.featured_cardL);
+        TextView showAllFeatured=(TextView)featuredCardL.findViewById(R.id.showAllTextView2);
+        featuredCard.findViewById(R.id.showAllTextView2);
+        featuredCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialog dialogFragment = new TabbedDialog();
+                dialogFragment.listItems=listItems;
+                dialogFragment.recyclerDataList=recyclerDataList;
+                dialogFragment.tabIndex=0;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+        final View allNewsCard=rootView.findViewById(R.id.all_news_card);
+        allNewsCard.findViewById(R.id.textView_allNews);
+        allNewsCard.setOnClickListener((new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+            if (prev != null) {
+                ft.remove(prev);
+            }
+            ft.addToBackStack(null);
+
+            // Create and show the dialog.
+            TabbedDialog dialogFragment = new TabbedDialog();
+            dialogFragment.listItems=listItems;
+            dialogFragment.recyclerDataList=recyclerDataList;
+            dialogFragment.tabIndex=1;
+            dialogFragment.show(ft,"dialog");
+
+        }
+
+        }));
         String list[] = new String[25];
         for (int i = 0; i < 19; i++)
             namesList.add("Article Title Here");
         listItems = new ArrayList<>();
         recyclerDataList = new ArrayList<>();
         loadRecyclerViewData();
-        RecyclerView allNews = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view_all_news);
-        allNews.setHasFixedSize(true);
-        RVAdapter allNewsAdapter=new RVAdapter(getContext(), recyclerDataList);
-        allNews.setLayoutManager(new LinearLayoutManager(getContext()));
-        allNews.setAdapter(allNewsAdapter);
         loadAllNews();
 
-        RVAdapter adapter = new RVAdapter(getContext(), listItems);
-
-
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        rv.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        rv.setAdapter(adapter);
-        runLayoutAnimation(rv);
         return rootView;
 
     }
@@ -88,6 +134,7 @@ public class ThisWeekFragment extends Fragment {
             @Override
             public void onResponse(String response) {
                 try {
+
                     JSONObject obj = new JSONObject(response);
                     JSONArray arr = obj.getJSONObject("top4").getJSONArray("posts");
                     String authors[] = new String[arr.length()];
@@ -104,6 +151,14 @@ public class ThisWeekFragment extends Fragment {
                                 o.getString("post_id"));
                         listItems.add(data);
                     }
+                    RVAdapter adapter = new RVAdapter(MyContext.getContext(), listItems);
+
+
+                    LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+                    rv.setLayoutManager(new LinearLayoutManager(MyContext.getContext()));
+
+                    rv.setAdapter(adapter);
+                    runLayoutAnimation(rv);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -117,9 +172,26 @@ public class ThisWeekFragment extends Fragment {
         });
 
 
-        RequestQueue rq = Volley.newRequestQueue(getContext());
+        RequestQueue rq = Volley.newRequestQueue(MyContext.getContext());
         rq.add(request);
     }
+    public void FeaturedShowAll(View view)
+    {
+        final Dialog fbDialogue = new Dialog(MyContext.getContext(), android.R.style.Theme_Black_NoTitleBar);
+        fbDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 0, 0, 0)));
+        fbDialogue.setContentView(R.layout.this_week_show_all);
+        fbDialogue.setCancelable(true);
+        fbDialogue.show();
+    }
+        public void onClick(View view)
+        {
+            switch (view.getId())
+            {
+                //handle multiple view click events
+                case R.id.showAllTextView2:
+            }
+        }
+
 
     private void loadAllNews() {
 
@@ -145,10 +217,16 @@ public class ThisWeekFragment extends Fragment {
                                 o.getString("post_id"));
                         recyclerDataList.add(data);
                     }
+                    allNews.setHasFixedSize(true);
+                    RVAdapter allNewsAdapter=new RVAdapter(MyContext.getContext(), recyclerDataList);
+                    allNews.setLayoutManager(new LinearLayoutManager(MyContext.getContext()));
+                    allNews.setAdapter(allNewsAdapter);
                 } catch (JSONException e) {
                     Toast.makeText(MyContext.getContext(), "Not working", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
-                }
+
+
+                    }
             }
         }, new Response.ErrorListener() {
             @Override
@@ -160,7 +238,7 @@ public class ThisWeekFragment extends Fragment {
             }
         });
 
-        RequestQueue rq = Volley.newRequestQueue(getContext());
+        RequestQueue rq = Volley.newRequestQueue(MyContext.getContext());
         rq.add(request);
 
 

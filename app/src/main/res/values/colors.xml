@@ -6,6 +6,7 @@
     <color name="categoriesButton">#FF1565C0</color>
     <color name="categoriesBack">#ffffff</color>
     <color name="headerColor">#FF2A5CE6</color>
+    <color name="selectedText">#fff</color>
 
     <color name="cardBackColor">#cdaac7ff</color>
 </resources>

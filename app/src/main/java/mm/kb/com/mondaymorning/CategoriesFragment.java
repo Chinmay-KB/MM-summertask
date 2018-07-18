@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -49,6 +50,13 @@ public class CategoriesFragment extends Fragment {
     private List<recyclerData> alumniList;
     private List<recyclerData> ddcwcList;
 
+    RecyclerView departmentRV;
+    RecyclerView campusRV;
+    RecyclerView viewsRV;
+    RecyclerView careerRV;
+    RecyclerView alumniRV;
+    RecyclerView ddcwcRV;
+
     public CategoriesFragment() {
         // Required empty public constructor
     }
@@ -63,12 +71,12 @@ public class CategoriesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.categories_layout, container, false);
-        RecyclerView departmentRV=(RecyclerView)rootView.findViewById(R.id.departments_rv);
-        RecyclerView campusRV=(RecyclerView)rootView.findViewById(R.id.campus_rv);
-        RecyclerView viewsRV=(RecyclerView)rootView.findViewById(R.id.views_rv);
-        RecyclerView careerRV=(RecyclerView)rootView.findViewById(R.id.career_rv);
-        RecyclerView alumniRV=(RecyclerView)rootView.findViewById(R.id.alumni_rv);
-        RecyclerView ddcwcRV=(RecyclerView)rootView.findViewById(R.id.ddcwc_rv);
+        departmentRV=(RecyclerView)rootView.findViewById(R.id.departments_rv);
+         campusRV=(RecyclerView)rootView.findViewById(R.id.campus_rv);
+         viewsRV=(RecyclerView)rootView.findViewById(R.id.views_rv);
+         careerRV=(RecyclerView)rootView.findViewById(R.id.career_rv);
+         alumniRV=(RecyclerView)rootView.findViewById(R.id.alumni_rv);
+         ddcwcRV=(RecyclerView)rootView.findViewById(R.id.ddcwc_rv);
 
         departmentRV.setHasFixedSize(true);
         campusRV.setHasFixedSize(true);
@@ -95,12 +103,7 @@ public class CategoriesFragment extends Fragment {
         alumniList=new ArrayList<>();
         ddcwcList=new ArrayList<>();
 
-        RVAdapter departmentAdapter=new RVAdapter(getContext(),departmentList);
-        RVAdapter campusAdapter=new RVAdapter(getContext(),campusList);
-        RVAdapter viewsAdapter=new RVAdapter(getContext(),viewsList);
-        RVAdapter careerAdapter=new RVAdapter(getContext(),careerList);
-        RVAdapter alumniAdapter=new RVAdapter(getContext(),alumniList);
-        RVAdapter ddcwcAdapter=new RVAdapter(getContext(),ddcwcList);
+
 
         departmentFetch();
         campusFetch();
@@ -109,12 +112,168 @@ public class CategoriesFragment extends Fragment {
         alumniFetch();
         ddcwcFetch();
 
-        departmentRV.setAdapter(departmentAdapter);
-        campusRV.setAdapter(campusAdapter);
-        viewsRV.setAdapter(viewsAdapter);
-        careerRV.setAdapter(careerAdapter);
-        alumniRV.setAdapter(alumniAdapter);
-        ddcwcRV.setAdapter(ddcwcAdapter);
+        final View departmentsCard=rootView.findViewById(R.id.departments_card);
+        final View campusCard=rootView.findViewById(R.id.campus_card);
+        final View viewsCard=rootView.findViewById(R.id.views_card);
+        final View careerCard=rootView.findViewById(R.id.career_card);
+        final View alumniCard=rootView.findViewById(R.id.alumni_card);
+        final View ddcwcCard=rootView.findViewById(R.id.ddcwc_card);
+        departmentsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialogCategories dialogFragment = new TabbedDialogCategories();
+                dialogFragment.departmentList=departmentList;
+                dialogFragment.campusList=campusList;
+                dialogFragment.viewsList=viewsList;
+                dialogFragment.careerList=careerList;
+                dialogFragment.alumniList=alumniList;
+                dialogFragment.ddcwcList=ddcwcList;
+                dialogFragment.tabIndex=0;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+        campusCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialogCategories dialogFragment = new TabbedDialogCategories();
+                dialogFragment.departmentList=departmentList;
+                dialogFragment.campusList=campusList;
+                dialogFragment.viewsList=viewsList;
+                dialogFragment.careerList=careerList;
+                dialogFragment.alumniList=alumniList;
+                dialogFragment.ddcwcList=ddcwcList;
+                dialogFragment.tabIndex=1;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+        viewsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialogCategories dialogFragment = new TabbedDialogCategories();
+                dialogFragment.departmentList=departmentList;
+                dialogFragment.campusList=campusList;
+                dialogFragment.viewsList=viewsList;
+                dialogFragment.careerList=careerList;
+                dialogFragment.alumniList=alumniList;
+                dialogFragment.ddcwcList=ddcwcList;
+                dialogFragment.tabIndex=2;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+        careerCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialogCategories dialogFragment = new TabbedDialogCategories();
+                dialogFragment.departmentList=departmentList;
+                dialogFragment.campusList=campusList;
+                dialogFragment.viewsList=viewsList;
+                dialogFragment.careerList=careerList;
+                dialogFragment.alumniList=alumniList;
+                dialogFragment.ddcwcList=ddcwcList;
+                dialogFragment.tabIndex=3;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+        alumniCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialogCategories dialogFragment = new TabbedDialogCategories();
+                dialogFragment.departmentList=departmentList;
+                dialogFragment.campusList=campusList;
+                dialogFragment.viewsList=viewsList;
+                dialogFragment.careerList=careerList;
+                dialogFragment.alumniList=alumniList;
+                dialogFragment.ddcwcList=ddcwcList;
+                dialogFragment.tabIndex=4;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+        ddcwcCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                // Create and show the dialog.
+                TabbedDialogCategories dialogFragment = new TabbedDialogCategories();
+                dialogFragment.departmentList=departmentList;
+                dialogFragment.campusList=campusList;
+                dialogFragment.viewsList=viewsList;
+                dialogFragment.careerList=careerList;
+                dialogFragment.alumniList=alumniList;
+                dialogFragment.ddcwcList=ddcwcList;
+                dialogFragment.tabIndex=5;
+                dialogFragment.show(ft,"dialog");
+
+            }
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
 
         return rootView;
 
@@ -143,10 +302,14 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         departmentList.add(data);
                     }
+                    RVAdapter departmentAdapter=new RVAdapter(getContext(),departmentList);
+                    departmentRV.setAdapter(departmentAdapter);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
+
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -185,6 +348,8 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         campusList.add(data);
                     }
+                    RVAdapter campusAdapter=new RVAdapter(getContext(),campusList);
+                    campusRV.setAdapter(campusAdapter);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -227,6 +392,9 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         viewsList.add(data);
                     }
+                    RVAdapter viewsAdapter=new RVAdapter(getContext(),viewsList);
+                    viewsRV.setAdapter(viewsAdapter);
+
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -269,6 +437,10 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         careerList.add(data);
                     }
+
+                    RVAdapter careerAdapter=new RVAdapter(getContext(),careerList);
+                    careerRV.setAdapter(careerAdapter);
+
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -277,6 +449,7 @@ public class CategoriesFragment extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
                 error.printStackTrace();
 
                 //Toast.makeText(MyContext.getContext(), "Not khelaw", //Toast.LENGTH_SHORT).show();
@@ -311,6 +484,12 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         alumniList.add(data);
                     }
+
+                    RVAdapter alumniAdapter=new RVAdapter(getContext(),alumniList);
+                    alumniRV.setAdapter(alumniAdapter);
+
+                    RVAdapter ddcwcAdapter=new RVAdapter(getContext(),ddcwcList);
+                    ddcwcRV.setAdapter(ddcwcAdapter);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -353,6 +532,12 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         ddcwcList.add(data);
                     }
+
+                    RVAdapter alumniAdapter=new RVAdapter(getContext(),alumniList);
+                    alumniRV.setAdapter(alumniAdapter);
+
+                    RVAdapter ddcwcAdapter=new RVAdapter(getContext(),ddcwcList);
+                    ddcwcRV.setAdapter(ddcwcAdapter);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();

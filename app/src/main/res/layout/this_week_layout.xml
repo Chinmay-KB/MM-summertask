@@ -14,7 +14,7 @@
     <android.support.v7.widget.CardView
         android:id="@+id/featured_card"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="313dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -29,16 +29,31 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/featured_cardL"
             >
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
+                android:layout_height="285dp"
                 android:nestedScrollingEnabled="false"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                ></android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@+id/showAllTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_above="@+id/rv_recycler_view"
+                android:layout_alignRight="@id/textView2"
+                android:background="#FF2A5CE6"
+                android:fontFamily="@font/candara"
+                android:padding="5dp"
+                android:elevation="8dp"
+                android:fadingEdgeLength="@dimen/cardview_compat_inset_shadow"
+                android:text="Show All >"
+                android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -53,13 +68,14 @@
                 android:fadingEdgeLength="@dimen/cardview_compat_inset_shadow"
                 android:text="Featured"
                 android:textColor="#fff" />
+
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:id="@+id/all_news_card"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="313dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="8dp"
@@ -74,17 +90,32 @@
         app:layout_constraintVertical_bias="0.17000002">
 
         <RelativeLayout
+            android:id="@+id/allNewsL"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_recycler_view_all_news"
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
-                android:nestedScrollingEnabled="false"
+                android:layout_height="285dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/showAllTextViewAllnews"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_above="@+id/rv_recycler_view_all_news"
+                android:layout_alignRight="@id/textView_allNews"
+                android:background="#FF2A5CE6"
+                android:elevation="8dp"
+                android:fadingEdgeLength="@dimen/cardview_compat_inset_shadow"
+                android:fontFamily="@font/candara"
+                android:padding="5dp"
+                android:text="Show All >"
+                android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/textView_allNews"
@@ -92,14 +123,15 @@
                 android:layout_height="30dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:fontFamily="@font/candara"
-                android:text="AllNews"
+                android:background="@color/headerColor"
                 android:elevation="7dp"
                 android:fadingEdgeLength="@dimen/cardview_compat_inset_shadow"
+                android:fontFamily="@font/candara"
 
                 android:padding="5dp"
-                android:background="@color/headerColor"
+                android:text="AllNews"
                 android:textColor="#fff" />
+
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

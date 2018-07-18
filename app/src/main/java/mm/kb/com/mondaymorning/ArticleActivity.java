@@ -13,6 +13,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,21 +37,20 @@ public class ArticleActivity extends AppCompatActivity {
     private String articleHeaderPrefix="http://mondaymorning.nitrkl.ac.in/uploads/post/big/";
     String  article_name;
     private ArrayList<ArticleStore> articleList = new ArrayList<>();
+    RecyclerView rv;
+    ViewGroup toolbar;
+    TextView tv;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.article_layout);
+        toolbar=findViewById(R.id.toolbar);
+        tv=(TextView)toolbar.findViewById(R.id.textView);
         Intent intent=getIntent();
         String s=intent.getStringExtra("post_id");
         articleURLPrefix += s;
         loadContent();
-        ArticleAdapter adapter = new ArticleAdapter(articleList,ArticleActivity.this,2);
-        RecyclerView rv = findViewById(R.id.article_recycler);
-        rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
-        rv.setItemAnimator(new DefaultItemAnimator());
-        rv.setAdapter(adapter);
-        //title.setText(s);
-        Toast.makeText(ArticleActivity.this, s,Toast.LENGTH_SHORT).show();
+        rv = findViewById(R.id.article_recycler);
 
     }
     private void loadContent() {
@@ -78,6 +78,11 @@ public class ArticleActivity extends AppCompatActivity {
                             articleList.add(model);
                         }
                     }
+                    tv.setText(jsonObject.getString("post_title" ));
+                    ArticleAdapter adapter = new ArticleAdapter(articleList,ArticleActivity.this,2);
+                    rv.setLayoutManager(new LinearLayoutManager(MyContext.getContext(), LinearLayoutManager.VERTICAL,false));
+                    rv.setItemAnimator(new DefaultItemAnimator());
+                    rv.setAdapter(adapter);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
