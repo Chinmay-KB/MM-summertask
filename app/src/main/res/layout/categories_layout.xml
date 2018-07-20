@@ -36,6 +36,14 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_department"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
 
             <TextView
                 android:id="@+id/showAllDepartments"
@@ -91,6 +99,14 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_campus"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
             <TextView
                 android:id="@+id/showAllCampus"
                 android:layout_width="wrap_content"
@@ -142,6 +158,14 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_views"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
             <TextView
                 android:id="@+id/showAllViews"
                 android:layout_width="wrap_content"
@@ -193,6 +217,14 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_career"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
             <TextView
                 android:id="@+id/showAllCareer"
                 android:layout_width="wrap_content"
@@ -245,6 +277,14 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_alumni"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
             <TextView
                 android:id="@+id/showAllAlumni"
                 android:layout_width="wrap_content"
@@ -297,6 +337,14 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_ddcwc"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
             <TextView
                 android:id="@+id/showAllddcwc"
                 android:layout_width="wrap_content"

@@ -14,6 +14,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class ArticleActivity extends AppCompatActivity {
     private String articleHeaderPrefix="http://mondaymorning.nitrkl.ac.in/uploads/post/big/";
     String  article_name;
     private ArrayList<ArticleStore> articleList = new ArrayList<>();
+    ProgressBar pb;
     RecyclerView rv;
     ViewGroup toolbar;
     TextView tv;
@@ -45,6 +47,8 @@ public class ArticleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.article_layout);
         toolbar=findViewById(R.id.toolbar);
+        pb=findViewById(R.id.article_load);
+        pb.setVisibility(View.VISIBLE);
         tv=(TextView)toolbar.findViewById(R.id.textView);
         Intent intent=getIntent();
         String s=intent.getStringExtra("post_id");
@@ -83,6 +87,7 @@ public class ArticleActivity extends AppCompatActivity {
                     rv.setLayoutManager(new LinearLayoutManager(MyContext.getContext(), LinearLayoutManager.VERTICAL,false));
                     rv.setItemAnimator(new DefaultItemAnimator());
                     rv.setAdapter(adapter);
+                    pb.setVisibility(View.GONE);
 
                 } catch (JSONException e) {
                     e.printStackTrace();

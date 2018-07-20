@@ -2,6 +2,7 @@ package mm.kb.com.mondaymorning;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.CardView;
@@ -76,9 +77,8 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> 
                 int index=pvh.getAdapterPosition();
                 Intent in=new Intent(viewGroup.getContext(),ArticleActivity.class);
                 TextView postId=(TextView)v.findViewById(R.id.page_id_stored);
-
                 in.putExtra("post_id",postId.getText().toString());
-                viewGroup.getContext().startActivity(in);
+               viewGroup.getContext().startActivity(in);
 
             }
         });

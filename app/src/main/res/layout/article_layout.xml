@@ -56,109 +56,20 @@
     </android.support.v7.widget.Toolbar>
 
 
-    <!-- <ScrollView
-         android:id="@+id/nestedScrollView"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginEnd="8dp"
-         android:layout_marginStart="8dp"
-         android:layout_marginTop="8dp"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.0"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-         app:layout_constraintVertical_bias="0.0">
 
-         <android.support.constraint.ConstraintLayout
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
-
-             <ImageView
-                 android:id="@+id/imageView"
-                 android:layout_width="match_parent"
-                 android:layout_height="200dp"
-                 android:layout_marginBottom="8dp"
-                 android:layout_marginEnd="8dp"
-                 android:elevation="4dp"
-
-                 android:layout_marginStart="8dp"
-                 android:layout_marginTop="7dp"
-                 android:scaleType="fitXY"
-                 android:src="@drawable/hero_image"
-                 app:layout_constraintBottom_toTopOf="@+id/article_title_main"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintHorizontal_bias="0.0"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toTopOf="parent"
-                 app:layout_constraintVertical_bias="0.0" />
-
-             <TextView
-                 android:id="@+id/article_title_main"
-                 android:layout_width="wrap_content"
-                 android:layout_height="27dp"
-                 android:layout_marginBottom="8dp"
-                 android:layout_marginEnd="8dp"
-                 android:layout_marginStart="8dp"
-                 android:layout_marginTop="220dp"
-                 android:fontFamily="@font/candara"
-                 android:text="Article title here"
-                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                 android:textColor="#000"
-                 android:textSize="25sp"
-                 android:transitionName="animating"
-                 app:layout_constraintBottom_toBottomOf="parent"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintHorizontal_bias="0.0"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toTopOf="parent"
-                 app:layout_constraintVertical_bias="0.0" />
-
-             <TextView
-                 android:id="@+id/textView3"
-                 android:layout_width="wrap_content"
-                 android:layout_height="15dp"
-                 android:layout_marginBottom="19dp"
-                 android:layout_marginEnd="252dp"
-                 android:layout_marginStart="8dp"
-                 android:layout_marginTop="9dp"
-                 android:fontFamily="@font/candara"
-                 android:text="Author 1, Author 2"
-                 app:layout_constraintBottom_toTopOf="@+id/textView4"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintHorizontal_bias="0.0"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toBottomOf="@+id/article_title_main" />
-
-             <TextView
-                 android:id="@+id/textView4"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_marginBottom="12dp"
-                 android:layout_marginEnd="8dp"
-                 android:layout_marginTop="8dp"
-                 android:fontFamily="@font/candara"
-                 android:paddingLeft="10dp"
-                 android:paddingRight="10dp"
-                 android:text="@string/lorem"
-                 android:lineSpacingExtra="2dp"
-                 android:textAlignment="viewStart"
-                 android:textColor="#000"
-                 android:textSize="17sp"
-                 android:typeface="serif"
-                 app:layout_constraintBottom_toBottomOf="parent"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintHorizontal_bias="1.0"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toBottomOf="@+id/article_title_main" />
-
-         </android.support.constraint.ConstraintLayout>
-     </ScrollView> -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/article_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_below="@id/toolbar"/>
+
+    <ProgressBar
+        android:id="@+id/article_load"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="227dp" />
 
 </RelativeLayout>

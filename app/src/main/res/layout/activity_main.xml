@@ -64,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_weight="1"
-                    app:layout_scrollFlags="scroll|enterAlways|snap"
+
                     app:navigationIcon="@drawable/ic_menu_black"
                     app:popupTheme="@style/Theme.AppCompat.Light"
                     app:title="Monday Morning"
@@ -76,7 +76,6 @@
                         android:layout_marginBottom="15dp"
                         android:fontFamily="@font/candara"
                         android:gravity="top"
-
                         android:text="Monday Morning"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                         android:textColor="#ffffff"

@@ -1,5 +1,6 @@
 package mm.kb.com.mondaymorning;
 
+import android.animation.ValueAnimator;
 import android.app.Dialog;
 
 import android.support.v4.app.Fragment;
@@ -18,7 +19,8 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.TextView;
-import android.widget.Toast;;import com.android.volley.Request;
+import android.widget.Toast;;import com.airbnb.lottie.LottieAnimationView;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -46,6 +48,7 @@ public class ThisWeekFragment extends Fragment {
     RecyclerView rv;
     RecyclerView allNews;
     FragmentManager fm;
+    private LottieAnimationView anim1, anim2;
 
     public ThisWeekFragment() {
         // Required empty public constructor
@@ -69,6 +72,10 @@ public class ThisWeekFragment extends Fragment {
         rv.setHasFixedSize(true);
         allNews = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view_all_news);
         allNews.setHasFixedSize(true);
+        anim2=rootView.findViewById(R.id.loading_allNews);
+        anim1=rootView.findViewById(R.id.loading_featured);
+        anim1.setVisibility(View.VISIBLE);
+        anim2.setVisibility(View.VISIBLE);
 
         final View featuredCard=rootView.findViewById(R.id.featured_card);
         View featuredCardL=featuredCard.findViewById(R.id.featured_cardL);
@@ -121,6 +128,9 @@ public class ThisWeekFragment extends Fragment {
             namesList.add("Article Title Here");
         listItems = new ArrayList<>();
         recyclerDataList = new ArrayList<>();
+
+        startCheckAnimation(anim1);
+        startCheckAnimation(anim2);
         loadRecyclerViewData();
         loadAllNews();
 
@@ -159,6 +169,7 @@ public class ThisWeekFragment extends Fragment {
 
                     rv.setAdapter(adapter);
                     runLayoutAnimation(rv);
+                    anim1.setVisibility(View.GONE);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -221,6 +232,7 @@ public class ThisWeekFragment extends Fragment {
                     RVAdapter allNewsAdapter=new RVAdapter(MyContext.getContext(), recyclerDataList);
                     allNews.setLayoutManager(new LinearLayoutManager(MyContext.getContext()));
                     allNews.setAdapter(allNewsAdapter);
+                    anim2.setVisibility(View.GONE);
                 } catch (JSONException e) {
                     Toast.makeText(MyContext.getContext(), "Not working", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -269,6 +281,17 @@ public class ThisWeekFragment extends Fragment {
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
+    }
+    private void startCheckAnimation(final LottieAnimationView lottieAnimationView) {
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(1000);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                lottieAnimationView.setProgress((Float) valueAnimator.getAnimatedValue());
+            }
+        });
+
+        animator.start();
     }
 
 }

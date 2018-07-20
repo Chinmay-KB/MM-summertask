@@ -36,15 +36,23 @@
                 android:id="@+id/rv_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="285dp"
-                android:nestedScrollingEnabled="false"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"
-                ></android.support.v7.widget.RecyclerView>
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_featured"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
             <TextView
                 android:id="@+id/showAllTextView2"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="160dp"
                 android:layout_above="@+id/rv_recycler_view"
                 android:layout_alignRight="@id/textView2"
                 android:background="#FF2A5CE6"
@@ -102,6 +110,14 @@
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"
                 android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_allNews"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="100dp"
+                app:lottie_fileName="progress_bar.json" />
 
             <TextView
                 android:id="@+id/showAllTextViewAllnews"

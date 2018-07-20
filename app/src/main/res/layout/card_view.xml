@@ -36,7 +36,8 @@
             card_view:layout_constraintHorizontal_bias="1.0"
             card_view:layout_constraintStart_toEndOf="@+id/iv_image"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="1.0"></TextView>
+            card_view:layout_constraintVertical_bias="1.0"
+            android:transitionName="transition"/>
 
         <ImageView
             android:id="@+id/iv_image"

@@ -13,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -57,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Adding tabs to the tabLayout
         final TabLayout tabLayout = findViewById(R.id.tabLayout);
-        //tabLayout.addTab(tabLayout.newTab().setText("THIS WEEK"), 0);
-        //tabLayout.addTab(tabLayout.newTab().setText("CATEGORIES"), 1);
+
         setAppBarHeight();
         initInstances();
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
@@ -106,6 +107,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            // THIS IS YOUR DRAWER/HAMBURGER BUTTON
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);  // OPEN DRAWER
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+
+}
 
     public void buildCategoryScroll() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -153,12 +167,27 @@ public class MainActivity extends AppCompatActivity {
         mSearch = menu.findItem(R.id.ic_action_search);
         SearchView mSearchView = (SearchView) mSearch.getActionView();
         mSearchView.setQueryHint("Search");
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent searchIntent=new Intent(MainActivity.this, SearchActivity.class);
+                searchIntent.putExtra("query",query);
+                startActivity(searchIntent);
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return super.onCreateOptionsMenu(menu);
 
     }
     private void setAppBarHeight() {
         AppBarLayout appBarLayout = findViewById(R.id.appbar);
-        appBarLayout.setLayoutParams(new CoordinatorLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getStatusBarHeight() + dpToPx(44 + 56)));
+        appBarLayout.setLayoutParams(new CoordinatorLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,  getStatusBarHeight()+ dpToPx(44 + 56)));
     }
 
     private int getStatusBarHeight() {
