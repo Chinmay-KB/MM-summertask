@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content_health_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="10dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Working Hours (Dispensary)" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Monday to Saturday" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dispensary_timings_mon_to_sat" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Ordinary Holidays" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dispensary_timings_holidays" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:textStyle="italic" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/dispensary_closed_msg" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="10dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Doctors" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_1_post" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_1_qrs" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_1_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_2_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_2_qrs" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/doctor_2_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Pharmacist" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pharmacist_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pharmacist_qrs" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pharmacist_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="CWS Hospital" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cws_phone_1" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cws_phone_2" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="IGH Hospital" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Phone" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/igh_phone" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ambulance" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/igh_ambulance" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Medical Vehicle" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/medical_vehicle_person_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/medical_vehicle_person_qrs" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/medical_vehicle_person_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Security Officer" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/security_officer_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/security_officer_qrs" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/security_officer_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Counselor" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/counselor_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/counselor_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Fire" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fire_phone_1" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fire_phone_2" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fire_phone_3" />
+                </LinearLayout>
+                <ImageButton android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

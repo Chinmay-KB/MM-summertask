@@ -7,16 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true">
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/header_layout"
-        app:itemIconTint="#ff1b6bae"
-        app:itemTextAppearance="@style/Widget.BottomNavigationView"
-        app:itemTextColor="#333"
-        app:menu="@menu/main_drawer" />
+
 
     <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -171,4 +162,15 @@
             app:tabTextColor="#fff" />
 
 </android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_layout"
+        app:itemIconTint="#ff1b6bae"
+        app:itemTextAppearance="@style/Widget.BottomNavigationView"
+        app:itemTextColor="#333"
+        app:menu="@menu/main_drawer"
+        android:elevation="10dp"/>
 </android.support.v4.widget.DrawerLayout>

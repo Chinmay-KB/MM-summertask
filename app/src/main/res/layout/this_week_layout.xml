@@ -41,14 +41,13 @@
                 android:layoutAnimation="@anim/layout_animation_fall_down"
                 android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
 
-            <com.airbnb.lottie.LottieAnimationView
+            <ProgressBar
                 android:id="@+id/loading_featured"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_margin="100dp"
-                app:lottie_fileName="progress_bar.json" />
+                android:layout_margin="100dp" />
             <TextView
                 android:id="@+id/showAllTextView2"
                 android:layout_width="wrap_content"
@@ -110,14 +109,14 @@
                 android:layout_alignParentStart="true"
                 android:layoutAnimation="@anim/layout_animation_fall_down"
                 android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/loading_allNews"
+
+            <ProgressBar
+                android:id="@+id/loading_allnews"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_margin="100dp"
-                app:lottie_fileName="progress_bar.json" />
+                android:layout_margin="100dp" />
 
             <TextView
                 android:id="@+id/showAllTextViewAllnews"

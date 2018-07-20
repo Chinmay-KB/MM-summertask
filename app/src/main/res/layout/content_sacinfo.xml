@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content_sac_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Dean's Nominee for Societies" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content"  />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_acs_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_acs_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ls_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_ls_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_ls_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gss_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_gss_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_gss_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ts_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_ts_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_ts_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Dean's Nominee for Fest" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fest1_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_innovision_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_innovision_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fest2_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_nitrutsav_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_nitrutsav_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fest3_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_sports_fest_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dean_nominee_sports_fest_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Director's Nominee" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ls_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_ls_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_ls_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content"  />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_acs_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_acs_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ts_name" />
+                <LinearLayout android:orientation="vertical"  android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_ts_1_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_ts_1_roll" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Conveners" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_general_convener"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="General Convener" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_general_convener">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/general_convener_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/emailId_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/general_convener_mail" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="mailPerson" app:srcCompat="@drawable/ic_email" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_joint_general_convener"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Joint General Convener" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_joint_general_convener">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/joint_general_convener_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/joint_general_convener_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fest1_name" />
+                <RelativeLayout  android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_innovision_1_name" />
+                        <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_innovision_1_mob" />
+                    </LinearLayout>
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_innovision_2_name" />
+                        <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_innovision_2_mob" />
+                    </LinearLayout>
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fest2_name" />
+                <RelativeLayout  android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/InfoCardHeading3" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_nitrutsav_1_name" />
+                        <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_nitrutsav_1_mob" />
+                    </LinearLayout>
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_nitrutsav_2_name" />
+                        <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_nitrutsav_2_mob" />
+                    </LinearLayout>
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fest3_name" />
+                <RelativeLayout  android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_annual_sports_meet_1_name" />
+                        <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_annual_sports_meet_1_mob" />
+                    </LinearLayout>
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_annual_sports_meet_2_name" />
+                        <TextView android:textAppearance="@style/InfoCardDetails" android:id="@+id/mobileNo_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/convener_annual_sports_meet_2_mobl" />
+                    </LinearLayout>
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content_hall_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="10dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Chief Warden of Halls" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/chief_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/chief_warden_qrs" android:lineSpacingExtra="2sp" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/chief_warden_mob" android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/InfoCardHeading1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:layout_marginRight="8dp" android:layout_marginBottom="3dp" android:text="Wardens of Halls" />
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_kmsHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/kms_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_kmsHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/kms_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/kms_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_cvrHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cvr_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_cvrHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cvr_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cvr_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_mvHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mv_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_mvHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mv_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mv_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_gdbHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gdb_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_gdbHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gdb_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gdb_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_dbaHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dba_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_dbaHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dba_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dba_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_mssHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mss_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_mssHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mss_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mss_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_hbHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hb_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_hbHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hb_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hb_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_vsHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/vs_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_vsHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/vs_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/vs_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_alignParentLeft="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/InfoCardHeading2" android:id="@+id/tv_sdHead" android:background="@drawable/card_head_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sd_hall_name" />
+                <LinearLayout android:orientation="vertical" android:paddingLeft="14dp" android:paddingTop="10dp" android:paddingRight="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_sdHead">
+                    <TextView android:textAppearance="@style/InfoCardHeading3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sd_hall_warden_name" />
+                    <TextView android:textAppearance="@style/InfoCardDetails"  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sd_hall_warden_mob" />
+                </LinearLayout>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:layout_alignParentRight="true" android:onClick="callPerson" app:srcCompat="@drawable/ic_call" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

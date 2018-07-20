@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;;import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
@@ -48,7 +49,7 @@ public class ThisWeekFragment extends Fragment {
     RecyclerView rv;
     RecyclerView allNews;
     FragmentManager fm;
-    private LottieAnimationView anim1, anim2;
+    ProgressBar anim1,anim2;
 
     public ThisWeekFragment() {
         // Required empty public constructor
@@ -72,7 +73,7 @@ public class ThisWeekFragment extends Fragment {
         rv.setHasFixedSize(true);
         allNews = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view_all_news);
         allNews.setHasFixedSize(true);
-        anim2=rootView.findViewById(R.id.loading_allNews);
+        anim2=rootView.findViewById(R.id.loading_allnews);
         anim1=rootView.findViewById(R.id.loading_featured);
         anim1.setVisibility(View.VISIBLE);
         anim2.setVisibility(View.VISIBLE);
@@ -129,8 +130,8 @@ public class ThisWeekFragment extends Fragment {
         listItems = new ArrayList<>();
         recyclerDataList = new ArrayList<>();
 
-        startCheckAnimation(anim1);
-        startCheckAnimation(anim2);
+        anim1.setVisibility(View.VISIBLE);
+        anim2.setVisibility(View.VISIBLE);
         loadRecyclerViewData();
         loadAllNews();
 
@@ -214,7 +215,6 @@ public class ThisWeekFragment extends Fragment {
                     JSONArray arr = obj.getJSONArray("posts");
                     String authors[] = new String[arr.length()];
                     String categories[] = new String[arr.length()];
-                    Toast.makeText(MyContext.getContext(), "working", Toast.LENGTH_SHORT).show();
 
                     for (int i = 0; i < arr.length(); ++i) {
                         JSONObject o = arr.getJSONObject(i);
@@ -244,8 +244,6 @@ public class ThisWeekFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
-
-                Toast.makeText(MyContext.getContext(), "Not khelaw", Toast.LENGTH_SHORT).show();
 
             }
         });

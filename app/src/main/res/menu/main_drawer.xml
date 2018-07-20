@@ -18,7 +18,7 @@
     <item
         android:id="@+id/halls"
         android:icon="@drawable/building"
-        android:title="Halls of Residence"/>
+        android:title="Halls of Residence" />
     <item
         android:id="@+id/sac"
         android:icon="@drawable/activities"

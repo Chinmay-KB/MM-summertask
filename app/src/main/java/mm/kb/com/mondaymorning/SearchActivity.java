@@ -32,7 +32,7 @@ import java.util.List;
 public class SearchActivity extends AppCompatActivity {
     public String query;
     private List<recyclerData> listItems;
-    private LottieAnimationView animationView;
+    private ProgressBar animationView;
 
     private String SEARCH_PREFIX="http://mondaymorning.nitrkl.ac.in/api/search/";
     String URL;
@@ -44,7 +44,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.search_layout);
 
         Intent i=getIntent();
-        animationView=(LottieAnimationView)findViewById(R.id.search_progress);
+        animationView=(ProgressBar) findViewById(R.id.loading_search);
         listItems=new ArrayList<>();
         query=i.getStringExtra("query");
         Toast.makeText(MyContext.getContext(),query,Toast.LENGTH_SHORT).show();
@@ -55,7 +55,6 @@ public class SearchActivity extends AppCompatActivity {
         searchResults=(RecyclerView)findViewById(R.id.search_rv);
         searchResults.setHasFixedSize(true);
         animationView.setVisibility(View.VISIBLE);
-        startCheckAnimation();
         loadSearches();
 
 
@@ -134,17 +133,6 @@ public class SearchActivity extends AppCompatActivity {
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
-    }
-    private void startCheckAnimation() {
-        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(1000);
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                animationView.setProgress((Float) valueAnimator.getAnimatedValue());
-            }
-        });
-
-        animator.start();
     }
 }
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
@@ -33,8 +34,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import java.time.Duration;
+
+public class MainActivity extends AppCompatActivity{
 
     Typeface typeface;
     Toolbar mToolbar;
@@ -71,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         {
             TabLayout.Tab tab=tabLayout.getTabAt(i);
             tab.setCustomView(pagerAdapter.getTabView(i));
+
         }
     }
     public void loginScreen(View view)
@@ -93,19 +98,33 @@ public class MainActivity extends AppCompatActivity {
                 int id = menuItem.getItemId();
                 switch (id) {
                     case R.id.health:
+                        startActivity(new Intent(MyContext.getContext(),HealthInfo.class));
                         //Do some thing here
                         // add navigation drawer item onclick method here
                         break;
                     case R.id.halls:
+                        startActivity(new Intent(MyContext.getContext(),HallInfo.class));
                         //Do some thing here
                         // add navigation drawer item onclick method here
                         break;
-
+                    case R.id.sac:
+                        startActivity(new Intent(MyContext.getContext(),sacInfo.class));
+                        break;
+                    case R.id.contact_us:
+                        startActivity(new Intent(MyContext.getContext(),ContactUs.class));
+                        break;
+                        default:Toast.makeText(MyContext.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }
         });
 
+    }
+    public void healthOpen(View view)
+    {
+        Toast.makeText(MyContext.getContext(),"Health", Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(MyContext.getContext(),HealthInfo.class);
+        startActivity(i);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -205,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
                 .density;
         return Math.round((float) dp * density);
     }
+
+
     class PagerAdapter extends FragmentPagerAdapter {
         LinearLayout viewCategoryNames;
         String tabTitles[] = new String[] { "THIS WEEK", "CATEGORIES"};

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -57,6 +58,7 @@ public class CategoriesFragment extends Fragment {
     RecyclerView alumniRV;
     RecyclerView ddcwcRV;
 
+    ProgressBar a1,a2,a3,a4,a5,a6;
     public CategoriesFragment() {
         // Required empty public constructor
     }
@@ -84,6 +86,13 @@ public class CategoriesFragment extends Fragment {
         careerRV.setHasFixedSize(true);
         alumniRV.setHasFixedSize(true);
         ddcwcRV.setHasFixedSize(true);
+
+        a1=rootView.findViewById(R.id.loading_department);
+        a2=rootView.findViewById(R.id.loading_campus);
+        a3=rootView.findViewById(R.id.loading_views);
+        a4=rootView.findViewById(R.id.loading_career);
+        a5=rootView.findViewById(R.id.loading_alumni);
+        a6=rootView.findViewById(R.id.loading_ddcwc);
 
 
 
@@ -264,7 +273,12 @@ public class CategoriesFragment extends Fragment {
         });
 
 
-
+a1.setVisibility(View.VISIBLE);
+        a2.setVisibility(View.VISIBLE);
+        a3.setVisibility(View.VISIBLE);
+        a4.setVisibility(View.VISIBLE);
+        a5.setVisibility(View.VISIBLE);
+        a6.setVisibility(View.VISIBLE);
 
 
 
@@ -304,6 +318,7 @@ public class CategoriesFragment extends Fragment {
                     }
                     RVAdapter departmentAdapter=new RVAdapter(getContext(),departmentList);
                     departmentRV.setAdapter(departmentAdapter);
+                    a1.setVisibility(View.GONE);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -350,6 +365,7 @@ public class CategoriesFragment extends Fragment {
                     }
                     RVAdapter campusAdapter=new RVAdapter(getContext(),campusList);
                     campusRV.setAdapter(campusAdapter);
+                    a2.setVisibility(View.GONE);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -394,6 +410,7 @@ public class CategoriesFragment extends Fragment {
                     }
                     RVAdapter viewsAdapter=new RVAdapter(getContext(),viewsList);
                     viewsRV.setAdapter(viewsAdapter);
+                    a3.setVisibility(View.GONE);
 
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
@@ -440,6 +457,7 @@ public class CategoriesFragment extends Fragment {
 
                     RVAdapter careerAdapter=new RVAdapter(getContext(),careerList);
                     careerRV.setAdapter(careerAdapter);
+                    a4.setVisibility(View.GONE);
 
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
@@ -487,9 +505,7 @@ public class CategoriesFragment extends Fragment {
 
                     RVAdapter alumniAdapter=new RVAdapter(getContext(),alumniList);
                     alumniRV.setAdapter(alumniAdapter);
-
-                    RVAdapter ddcwcAdapter=new RVAdapter(getContext(),ddcwcList);
-                    ddcwcRV.setAdapter(ddcwcAdapter);
+                    a5.setVisibility(View.GONE);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
@@ -532,12 +548,9 @@ public class CategoriesFragment extends Fragment {
                                 o.getString("post_id"));
                         ddcwcList.add(data);
                     }
-
-                    RVAdapter alumniAdapter=new RVAdapter(getContext(),alumniList);
-                    alumniRV.setAdapter(alumniAdapter);
-
                     RVAdapter ddcwcAdapter=new RVAdapter(getContext(),ddcwcList);
                     ddcwcRV.setAdapter(ddcwcAdapter);
+                    a6.setVisibility(View.GONE);
                 } catch (JSONException e) {
                     //Toast.makeText(MyContext.getContext(), "Not working", //Toast.LENGTH_SHORT).show();
                     e.printStackTrace();

@@ -17,13 +17,12 @@
         android:layout_below="@id/search_toolbar"
         android:id="@+id/search_rv"/>
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/search_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="240dp"
-        app:lottie_fileName="progress_bar.json" />
+    <ProgressBar
+        android:id="@+id/loading_search"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="100dp" />
 
 </RelativeLayout>
